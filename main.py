@@ -3,8 +3,8 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 
-MY_EMAIL = "mlsharma4978@gmail.com"
-MY_PASSWORD = "qwjxlglaopjtxdcd"
+MY_EMAIL = "USE YOUR OWN EMAIL"
+MY_PASSWORD = "USE YOUR OWN PASSWORD"
 
 session = requests.Session()
 response = session.get("https://news.ycombinator.com/")
@@ -32,7 +32,7 @@ message = f"1. {top_articles_titles[0]}:\t    {top_articles_links[0]}\n" \
 msg = MIMEText(message, 'plain', 'utf-8')
 msg['Subject'] = subject
 msg['From'] = MY_EMAIL
-msg['To'] = "shaguns880@gmail.com"
+msg['To'] = "USE ANOTHER EMAIL"
 
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
@@ -45,8 +45,8 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
 # import requests
 # import smtplib
 #
-# MY_EMAIL = "mlsharma4978@gmail.com"
-# MY_PASSWORD = "qwjxlglaopjtxdcd"
+#MY_EMAIL = "USE YOUR OWN EMAIL"
+#MY_PASSWORD = "USE YOUR OWN PASSWORD"
 #
 # response = requests.get("https://news.ycombinator.com/")
 # yc_web_page = response.text
@@ -80,7 +80,7 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
 #     connection.login(user=MY_EMAIL, password=MY_PASSWORD)
 #     connection.sendmail(
 #         from_addr=MY_EMAIL,
-#         to_addrs="shaguns880@gmail.com",
+#         to_addrs="USE ANOTHER EMAIL",
 #         msg=f"Subject:HackerNews\n\n"
 #             f"1. {top_articles_titles[0]}:\t    {top_articles_links[0]}\n"
 #             f"2. {top_articles_titles[1]}:\t    {top_articles_links[1]}\n"
